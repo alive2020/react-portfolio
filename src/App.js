@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
-import Home from './PortfolioContainer/Home/Home';
+import PortfolioContainer from './PortfolioContainer/PortfolioContainer';
+
 function App() {
   const { t, i18n } = useTranslation();
 
@@ -19,7 +20,7 @@ function App() {
         <button onClick={() => handleClick('ko')}>Korean</button>
         <button onClick={() => handleClick('ru')}>Russian</button>
       </nav>
-      <Home />
+      <PortfolioContainer />
       <header className='App-header'>
         <p>
           <h3>{t('Thanks.1')}</h3>
