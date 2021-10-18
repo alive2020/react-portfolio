@@ -16,7 +16,8 @@
 .screen-heading {
   font-size: 32px;
   color: #1f2235;
-  font-family: 'Poppins Bold';
+  font-weight: 700;
+  /* font-family: 'Poppins Bold'; */
 }
 
 .heading-separator {

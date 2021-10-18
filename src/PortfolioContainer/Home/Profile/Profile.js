@@ -39,7 +39,7 @@ export default function Profile() {
           <div className='profile-details-role'>
             <span className='primary-text'>
               {' '}
-              <h1>
+              {/* <h1>
                 {' '}
                 <Typical
                   loop={Infinity}
@@ -54,7 +54,7 @@ export default function Profile() {
                     1000,
                   ]}
                 />
-              </h1>
+              </h1> */}
               <span className='profile-role-tagline'>
                 Open to work in an enthusiastic and flexible environment.
               </span>

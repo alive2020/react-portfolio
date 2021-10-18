@@ -19,22 +19,21 @@ export default function Resume(props) {
     return (
       <div className='resume-heading'>
         <div className='resume-main-heading'>
-          <div className='heading-bullet'>
-            <span>{props.heading ? props.heading : ''}</span>
-            {props.fromDate && props.toDate ? (
-              <div className='heading-date'>
-                {props.fromDate + '_' + props.toDate}
-              </div>
-            ) : (
-              <div></div>
-            )}
-          </div>
-          <div className='resume-sub-heading'>
-            <span>{props.subHeading ? props.subHeading : ''}</span>
-          </div>
-          <div className='resume-heading-description'>
-            <span>{props.description ? props.description : ''}</span>
-          </div>
+          <div className='heading-bullet'></div>
+          <span>{props.heading ? props.heading : ''}</span>
+          {props.fromDate && props.toDate ? (
+            <div className='heading-date'>
+              {props.fromDate + ' - ' + props.toDate}
+            </div>
+          ) : (
+            <div></div>
+          )}
+        </div>
+        <div className='resume-sub-heading'>
+          <span>{props.subHeading ? props.subHeading : ''}</span>
+        </div>
+        <div className='resume-heading-description'>
+          <span>{props.description ? props.description : ''}</span>
         </div>
       </div>
     );
@@ -58,12 +57,12 @@ export default function Resume(props) {
     { skill: 'Node.js' },
   ];
 
-  const projectDetails = [
+  const projectsDetails = [
     {
       title: 'UPKAIT website',
       duration: { fromDate: '2021.01', toDate: '2021.03' },
       description:
-        'Website of Wholesale Food Distributing Company located in Busan UPKAIT , which supplies korean food products across the territory of the Far East, Siberia, Kazakhstan, Uzbekistan. Developed a multilingual website from scratch in a team of 2 people. I was responsible for the design, style, content of a website, and content on Prismic CMS. Learned more about styling a website according to requirements of a client and using headless CMS as Prismic.',
+        'Website of Wholesale Food Distributing Company located in Busan UPKAIT. Developed a multilingual website from scratch in a team of 2 people. I was responsible for the design, style, content of a website, and content on Prismic CMS. Learned more about styling a website according to requirements of a client and using headless CMS as Prismic.',
 
       subHeading: 'Technologies used: Next.js, Node.js, CSS, Prismic',
     },
@@ -71,60 +70,78 @@ export default function Resume(props) {
       title: 'Personal Portfolio Website',
       duration: { fromDate: '2020.12', toDate: '2021.01' },
       description: 'My first portfolio using pure Javascript, CSS, HTML',
-      subHeading: 'Technologies used: Javascript, CSS, HTML',
+      subHeading: 'Technologies used: Javascript, CSS, HTML.',
     },
   ];
 
   const resumeDetails = [
+    /* WORK EXPERIENCE */
     <div className='resume-screen-container' key='work-experience'>
-      <ResumeHeading
-        heading={'Amond Inc.'}
-        subHeading={'Junior front-end developer intern'}
-        fromDate={'2021.04'}
-        toDate={'2021.09'}
-      />
-      <div className='experience-description'>
-        <span className='resume-description-text'>
-          Responsible for hellolive.tv back office development and enhancement
-        </span>
+      <div className='experience-container'>
+        <ResumeHeading
+          heading={'Amond Inc.'}
+          subHeading={'Junior front-end developer intern'}
+          fromDate={'2021.04'}
+          toDate={'2021.09'}
+        />
+        <div className='experience-description'>
+          <span className='resume-description-text'>
+            Responsible for hellolive.tv back office development and
+            enhancement.
+          </span>
+        </div>
+        <div className='experience-description'>
+          <span className='resume-description-text'>
+            -Used Vue.js and Vuetify to develop the back-office.
+          </span>
+          <br />
+          <span className='resume-description-text'>
+            -Worked with backend developer to implement functionality that
+            Hellolive platform needed.{' '}
+          </span>
+          <br />
+          <span className='resume-description-text'>
+            -Enhanced UI of the backoffice according to the CS workers' demands.
+          </span>
+          <br />
+        </div>
       </div>
-      <div className='experience-description'>
-        <span className='resume-description-text'>
-          - Used Vue.js and Vuetify to develop the back-office
-        </span>
-        <br />
-        <span className='resume-description-text'>
-          - Worked with backend developer to implement functionality that
-          Hellolive platform needed
-        </span>
-        <span className='resume-description-text'>
-          - Enhanced UI of the backoffice according to the CS workers' demands
-        </span>
+    </div>,
+
+    /* PROJECTS */
+    <div className='resume-screen-container' key='projects'>
+      <div className='projects-container'>
+        {projectsDetails.map((projectsDetails, index) => (
+          <ResumeHeading
+            key={index}
+            heading={projectsDetails.title}
+            subHeading={projectsDetails.subHeading}
+            description={projectsDetails.description}
+            fromDate={projectsDetails.duration.fromDate}
+            toDate={projectsDetails.duration.toDate}
+          />
+        ))}
       </div>
-      ,
-      <div
-        className='resume-screen-container programming-skills-container'
-        key='programming-skills'
-      >
-        {programmingSkillsDetails.map((skill, index) => {
+    </div>,
+
+    /* PROGRAMMING SKILLS */
+    <div
+      className='resume-screen-container programming-skills-container'
+      key='programming-skills'
+    >
+      <div className='skills-container'>
+        {programmingSkillsDetails.map((skill, index) => (
           <div className='skill-parent' key={index}>
             <div className='heading-bullet'></div>
             <span>{skill.skill}</span>
-          </div>;
-        })}
-      </div>
-      ,
-      <div className='resume-screen-container' key='projects'>
-        {projectDetails.map((projectDetails, index) => {
-          <ResumeHeading
-            key={index}
-            heading={projectDetails.title}
-            subHeading={projectDetails.subHeading}
-            description={projectDetails.description}
-            fromDate={projectDetails.duration.fromDate}
-            toDate={projectDetails.duration.toDate}
-          />;
-        })}
+            {/* <div className='skill-percentage'>
+            <div
+              style={{ width: skill.ratingPercentage + '%' }}
+              className='active-percentage-bar'
+            ></div>
+          </div> */}
+          </div>
+        ))}
       </div>
     </div>,
   ];
@@ -152,6 +169,7 @@ export default function Resume(props) {
           src={require(`../../assets/Resume/${bullet.logoSrc}`).default}
           alt='B'
         />
+        <span className='bullet-label'>{bullet.label}</span>
       </div>
     ));
   };
@@ -184,3 +202,5 @@ export default function Resume(props) {
     </div>
   );
 }
+
+// export default Resume;
