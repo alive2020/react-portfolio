@@ -4,7 +4,8 @@ import ScrollService from '../../utils/ScrollService';
 import Animations from '../../utils/Animations';
 import './Resume.css';
 
-export default function Resume(props) {
+// export default function Resume(props)
+const Resume = (props) => {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffSetStyle, setCarousalOffSetStyle] = useState({});
 
@@ -201,6 +202,6 @@ export default function Resume(props) {
       </div>
     </div>
   );
-}
+};
 
-// export default Resume;
+export default Resume;

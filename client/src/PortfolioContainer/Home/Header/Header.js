@@ -19,22 +19,23 @@ export default function Header() {
     ScrollService.currentScreenBroadCaster.subscribe(updateCurrentScreen);
 
   const getHeaderOptions = () => {
-    return TOTAL_SCREENS.map((screen, i) => {
+    return TOTAL_SCREENS.map((Screen, i) => (
       <div
         key={Screen.screen_name}
         className={getHeaderOptionsClasses(i)}
         onClick={() => switchScreen(i, Screen)}
       >
         <span>{Screen.screen_name}</span>
-      </div>;
-    });
+      </div>
+    ));
   };
 
   const getHeaderOptionsClasses = (index) => {
-    let classes = 'header-option';
-    if (index < TOTAL_SCREENS.length - 1) classes += 'header-option-separator';
+    let classes = 'header-option ';
+    if (index < TOTAL_SCREENS.length - 1) classes += 'header-option-seperator ';
 
-    if (selectedScreen === index) classes += 'selected-header-option';
+    if (selectedScreen === index) classes += 'selected-header-option ';
+
     return classes;
   };
 
@@ -66,7 +67,7 @@ export default function Header() {
           <FontAwesomeIcon className='header-hamburger-bars' icon={faBars} />
         </div>
         <div className='header-logo'>
-          <span>ICE CALEE</span>
+          <span>Ice Calee</span>
         </div>
         <div
           className={

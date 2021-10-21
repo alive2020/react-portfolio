@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Typical from 'react-typical';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import imgBack from '../../images/mailz.jpeg';
+import imgBack from '../../images/email.png';
 import load1 from '../../images/load2.gif';
 import ScreenHeading from '../../utils/ScreenHeading/ScreenHeading';
 import ScrollService from '../../utils/ScrollService';
@@ -68,7 +68,7 @@ export default function ContactMe(props) {
       <div className='central-form'>
         <div className='col'>
           <h2 className='title'>
-            <Typical loop={Infinity} steps={['Get in touch ✉️', 1000]} />
+            <Typical loop={Infinity} steps={['Get in Touch', 1000]} />
           </h2>{' '}
           <a
             href='https://www.linkedin.com/in/aisulu-k-73b91797/'
@@ -88,7 +88,7 @@ export default function ContactMe(props) {
         </div>
         <div className='back-form'>
           <div className='img-back'>
-            <h4>Send Your Email Here!</h4>
+            {/* <h4>Send Your Email Here!</h4> */}
             <img src={imgBack} alt='image not found' />
           </div>
           <form onSubmit={submitForm}>
@@ -116,7 +116,7 @@ export default function ContactMe(props) {
         </div>
       </div>
       {/* <Footer /> */}
-      <p className="copyRight">All rights reserved &copy; Ice Calee 2021</p>
+      <p className='copyRight'>All rights reserved &copy; Ice Calee 2021</p>
     </div>
   );
 }
