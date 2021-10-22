@@ -3,9 +3,13 @@ import ScreenHeading from '../../utils/ScreenHeading/ScreenHeading';
 import ScrollService from '../../utils/ScrollService';
 import Animations from '../../utils/Animations';
 import './Resume.css';
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 // export default function Resume(props)
 const Resume = (props) => {
+  const { t, i18n } = useTranslation();
+
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffSetStyle, setCarousalOffSetStyle] = useState({});
 
@@ -41,9 +45,9 @@ const Resume = (props) => {
   };
 
   const resumeBullets = [
-    { label: 'Frontend Work Experience', logoSrc: 'work-history.svg' },
-    { label: 'Side Projects', logoSrc: 'projects.svg' },
-    { label: 'Skills', logoSrc: 'programming-skills.svg' },
+    { label: t('Resume.1'), logoSrc: 'work-history.svg' },
+    { label: t('Resume.2'), logoSrc: 'projects.svg' },
+    { label: t('Resume.3'), logoSrc: 'programming-skills.svg' },
   ];
 
   const programmingSkillsDetails = [
@@ -62,15 +66,13 @@ const Resume = (props) => {
     {
       title: 'UPKAIT website',
       duration: { fromDate: '2021.01', toDate: '2021.03' },
-      description:
-        'Website of Wholesale Food Distributing Company located in Busan UPKAIT. Developed a multilingual website from scratch in a team of 2 people. I was responsible for the design, style, content of a website, and content on Prismic CMS. Learned more about styling a website according to requirements of a client and using headless CMS as Prismic.',
-
+      description: t('Projects.1'),
       subHeading: 'Technologies used: Next.js, Node.js, CSS, Prismic',
     },
     {
       title: 'Personal Portfolio Website',
       duration: { fromDate: '2020.12', toDate: '2021.01' },
-      description: 'My first portfolio using pure Javascript, CSS, HTML',
+      description: t('Projects.2'),
       subHeading: 'Technologies used: Javascript, CSS, HTML.',
     },
   ];
@@ -86,24 +88,14 @@ const Resume = (props) => {
           toDate={'2021.09'}
         />
         <div className='experience-description'>
-          <span className='resume-description-text'>
-            Responsible for hellolive.tv back office development and
-            enhancement.
-          </span>
+          <span className='resume-description-text'>{t('Frontend.1')}</span>
         </div>
         <div className='experience-description'>
-          <span className='resume-description-text'>
-            -Used Vue.js and Vuetify to develop the back-office.
-          </span>
+          <span className='resume-description-text'>{t('Frontend.2')}</span>
           <br />
-          <span className='resume-description-text'>
-            -Worked with backend developer to implement functionality that
-            Hellolive platform needed.{' '}
-          </span>
+          <span className='resume-description-text'>{t('Frontend.3')}</span>
           <br />
-          <span className='resume-description-text'>
-            -Enhanced UI of the backoffice according to the CS workers' demands.
-          </span>
+          <span className='resume-description-text'>{t('Frontend.3')}</span>
           <br />
         </div>
       </div>

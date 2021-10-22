@@ -33,8 +33,8 @@ export default function Profile() {
           </div>
           <div className='profile-details-name'>
             <span className='primary-text'>
-              {' '}
-              Hello, I'm <span className='highlighted-text'>Ice Calee</span>
+              {t('Profile.1')}
+              {/* Hello, I'm <span className='highlighted-text'>Ice Calee</span> */}
             </span>
           </div>
           <div className='profile-details-role'>
@@ -56,9 +56,7 @@ export default function Profile() {
                   ]}
                 />
               </h1> */}
-              <span className='profile-role-tagline'>
-                Open to work in an enthusiastic and flexible environment.
-              </span>
+              <span className='profile-role-tagline'>{t('Profile.2')}</span>
             </span>
           </div>
           <div className='profile-options'>
@@ -66,10 +64,10 @@ export default function Profile() {
               className='btn primary-btn'
               onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
             >
-              Hire Me
+              {t('Profile.3')}
             </button>
             <a href='AisuluK_Resume.pdf' download='AisuluK_Resume.pdf'>
-              <button className='btn highlighted-btn'>Get Resume</button>
+              <button className='btn highlighted-btn'>{t('Profile.4')}</button>
             </a>
           </div>
         </div>

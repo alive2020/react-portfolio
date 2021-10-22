@@ -15,7 +15,7 @@
 
 .profile-details-name {
   font-size: 24px;
-  font-family: 'Poppins';
+  /* font-family: 'Poppins'; */
   font-weight: bold;
 }
 
@@ -44,7 +44,7 @@
 .profile-role-tagline {
   font-size: 19px;
   margin: 5px 0 0 0;
-  font-family: 'Poppins';
+  /* font-family: 'Poppins'; */
 }
 
 .profile-options .highlighted-btn {

@@ -68,6 +68,13 @@
     z-index: 1000;
     opacity: 0.5;
   }
+  .langNav {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    background: transparent;
+  }
   .header-option-seperator {
     margin: 0;
   }

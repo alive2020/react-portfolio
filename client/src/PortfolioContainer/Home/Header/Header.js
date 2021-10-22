@@ -5,7 +5,16 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Header.css';
 
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
+
 export default function Header() {
+  const { t, i18n } = useTranslation();
+
+  function handleClick(lang) {
+    i18next.changeLanguage(lang);
+  }
+
   const [selectedScreen, setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
 
@@ -77,6 +86,11 @@ export default function Header() {
           }
         >
           {getHeaderOptions()}
+          <nav className='langNav'>
+            <button onClick={() => handleClick('en')}>En</button>
+            <button onClick={() => handleClick('ko')}>Ko</button>
+            <button onClick={() => handleClick('ru')}>Ru</button>
+          </nav>
         </div>
       </div>
     </div>

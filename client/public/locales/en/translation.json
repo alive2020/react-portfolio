@@ -1,9 +1,24 @@
 {
-    "Thanks": {
-        "1": "Thank you"
+    "Profile": {
+        "1": "Hello, I'm Ice Calee",
+        "2": "Open to work in an enthusiastic and flexible environment.",
+        "3": "Hire Me",
+        "4": "Get Resume"
     },
-    "Why": {
-        "1": "for visiting my website"
+    "Resume": {
+        "1": "Frontend Work Experience",
+        "2": "Side Projects",
+        "3": "Skill"
+    },
+    "Frontend": {
+        "1": "Responsible for hellolive.tv back office development and enhancement.",
+        "2": "-Used Vue.js and Vuetify to develop the back-office.",
+        "3": "-Worked with backend developer to implement functionality that Hellolive platform needed.",
+        "4": "-Enhanced UI of the backoffice according to the CS workers' demands."
+    },
+    "Projects": {
+        "1": "Website of Wholesale Food Distributing Company located in Busan UPKAIT. Developed a multilingual website from scratch in a team of 2 people. I was responsible for the design, style, content of a website, and content on Prismic CMS. Learned more about styling a website according to requirements of a client and using headless CMS as Prismic.",
+        "2": "My first portfolio using pure Javascript, CSS, HTML"
     },
     "job_description": "A junior frontend developer"
 }
