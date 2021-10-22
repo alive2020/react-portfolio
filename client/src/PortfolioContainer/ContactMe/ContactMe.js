@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Typical from 'react-typical';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 import imgBack from '../../images/email.png';
 import load1 from '../../images/load2.gif';
 import ScreenHeading from '../../utils/ScreenHeading/ScreenHeading';
@@ -11,6 +13,8 @@ import './ContactMe.css';
 import Footer from '../../PortfolioContainer/Footer/Footer';
 
 export default function ContactMe(props) {
+  const { t, i18n } = useTranslation();
+
   let fadeInScreenHandler = (screen) => {
     if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
@@ -93,15 +97,15 @@ export default function ContactMe(props) {
           </div>
           <form onSubmit={submitForm}>
             <p>{banner}</p>
-            <label htmlFor='name'>Name</label>
+            <label htmlFor='name'>{t('ContactMe.1')}</label>
             <input type='text' onChange={handleName} value={name} />
-            <label htmlFor='email'>Email</label>
+            <label htmlFor='email'>{t('ContactMe.2')}</label>
             <input type='email' onChange={handleEmail} value={email} />
-            <label htmlFor='message'>Message</label>
+            <label htmlFor='message'>{t('ContactMe.3')}</label>
             <textarea type='text' onChange={handleMessage} value={message} />
             <div className='send-btn'>
               <button type='submit'>
-                Send
+                {t('ContactMe.4')}
                 <i className='fa fa-paper-plane' />
                 {bool ? (
                   <b className='load'>

@@ -20,6 +20,12 @@
         "1": "Website of Wholesale Food Distributing Company located in Busan UPKAIT. Developed a multilingual website from scratch in a team of 2 people. I was responsible for the design, style, content of a website, and content on Prismic CMS. Learned more about styling a website according to requirements of a client and using headless CMS as Prismic.",
         "2": "My first portfolio using pure Javascript, CSS, HTML"
     },
+    "ContactMe": {
+        "1": "Name",
+        "2": "Email",
+        "3": "Message",
+        "4": "Send"
+    },
     "job_description": "A junior frontend developer"
 }
 
