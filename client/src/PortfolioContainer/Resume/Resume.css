@@ -236,6 +236,18 @@
     width: 100%;
   }
 
+  @media only screen and (max-width: 450px) {
+    .resume-main-heading span {
+      font-size: 13px;
+    }
+    .resume-sub-heading {
+      font-size: 10px;
+    }
+    .heading-date {
+      font-size: 10px;
+    }
+  }
+
   /* .resume-screen-container .projects-container .resume-heading-description {
     margin: 10px 0;
   } */

@@ -105,7 +105,7 @@ const Resume = (props) => {
       <div className='experience-container'>
         <ResumeHeading
           heading={'Amond Inc.'}
-          subHeading={'Junior front-end developer intern'}
+          subHeading={'Junior front-end developer (Internship)'}
           fromDate={'2021.04'}
           toDate={'2021.09'}
         />
