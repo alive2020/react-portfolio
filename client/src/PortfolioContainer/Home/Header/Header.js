@@ -11,9 +11,15 @@ import i18next from 'i18next';
 export default function Header() {
   const { t, i18n } = useTranslation();
 
-  function handleClick(lang) {
-    i18next.changeLanguage(lang);
-  }
+  // function handleClick(lang) {
+  //   i18next.changeLanguage(lang);
+  // }
+
+  const [count, setCount] = useState(0);
+  const onChange = (event) => {
+    i18next.changeLanguage(event.target.value);
+    setCount((previousCount) => previousCount + 1);
+  };
 
   const [selectedScreen, setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
@@ -86,11 +92,16 @@ export default function Header() {
           }
         >
           {getHeaderOptions()}
-          <nav className='langNav'>
+          {/* <nav className='langNav'>
             <button onClick={() => handleClick('en')}>En</button>
             <button onClick={() => handleClick('ko')}>Ko</button>
             <button onClick={() => handleClick('ru')}>Ru</button>
-          </nav>
+          </nav> */}
+          <select name='language' onChange={onChange}>
+            <option value='en'>En</option>
+            <option value='ko'>Ko</option>
+            <option value='ru'>Ru</option>
+          </select>
         </div>
       </div>
     </div>

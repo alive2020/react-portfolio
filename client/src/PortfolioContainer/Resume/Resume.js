@@ -48,6 +48,7 @@ const Resume = (props) => {
     { label: t('Resume.1'), logoSrc: 'work-history.svg' },
     { label: t('Resume.2'), logoSrc: 'projects.svg' },
     { label: t('Resume.3'), logoSrc: 'programming-skills.svg' },
+    { label: t('Resume.4'), logoSrc: 'interests.svg' },
   ];
 
   const programmingSkillsDetails = [
@@ -74,6 +75,27 @@ const Resume = (props) => {
       duration: { fromDate: '2020.12', toDate: '2021.01' },
       description: t('Projects.2'),
       subHeading: 'Technologies used: Javascript, CSS, HTML.',
+    },
+  ];
+
+  const otherDetails = [
+    {
+      title: 'HSnK Architecture & Engineering',
+      duration: { fromDate: '2018.05', toDate: '2020.09' },
+      description: t('Other.1'),
+      subHeading: 'Marketing Project Coordinator, Overseas (Fulltime)',
+    },
+    {
+      title: 'Samsung D’light(Samsung Electronics)',
+      duration: { fromDate: '2017.05', toDate: '2017.10' },
+      description: t('Other.2'),
+      subHeading: 'Docent & Customer Support (Internship)',
+    },
+    {
+      title: 'KGL Medical Tour & Consulting',
+      duration: { fromDate: '2016.08', toDate: '2017.04' },
+      description: t('Other.3'),
+      subHeading: 'Marketing Ops (Fulltime)',
     },
   ];
 
@@ -136,6 +158,20 @@ const Resume = (props) => {
           </div>
         ))}
       </div>
+    </div>,
+
+    /* OTHER EXPERIENCE */
+    <div className='resume-screen-container' key='other'>
+      {otherDetails.map((otherDetails, index) => (
+        <ResumeHeading
+          key={index}
+          heading={otherDetails.title}
+          subHeading={otherDetails.subHeading}
+          description={otherDetails.description}
+          fromDate={otherDetails.duration.fromDate}
+          toDate={otherDetails.duration.toDate}
+        />
+      ))}
     </div>,
   ];
 

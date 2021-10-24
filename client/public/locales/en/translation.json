@@ -8,7 +8,8 @@
     "Resume": {
         "1": "Frontend Work Experience",
         "2": "Side Projects",
-        "3": "Skill"
+        "3": "Skill",
+        "4": "Other Work Experience"
     },
     "Frontend": {
         "1": "Responsible for hellolive.tv back office development and enhancement.",
@@ -19,6 +20,11 @@
     "Projects": {
         "1": "Website of Wholesale Food Distributing Company located in Busan UPKAIT. Developed a multilingual website from scratch in a team of 2 people. I was responsible for the design, style, content of a website, and content on Prismic CMS. Learned more about styling a website according to requirements of a client and using headless CMS as Prismic.",
         "2": "My first portfolio using pure Javascript, CSS, HTML"
+    },
+    "Other": {
+        "1": "- Collaborated with project managers and designers (Researching, Planning and Executing Projects). Led business relationship/connection with overseas branches. Initiated and restructured the company's website, incorporating different social media platforms. Ran Google and Facebook Ads campaigns",
+        "2": "- Led individualized educational and interactive tours for groups of international high positioned guests from across the globe. Assisted with onsite customer support using: Korean, English, and Russian languages. Prepared and designed the company’s presentations  for various events, conventions, and roadshows. Participated in Seoul International Travel Mart, Korea’s largest annual B2B conference for Russian-speaking companies in the Travel industry.",
+        "3": "- Responsible for the company's website development, design, and content; Ran Google ad campaigns. Created engaging blog content and generated informative videos on various social media platforms (Facebook, Instagram, Youtube). Developed overseas partnerships"
     },
     "ContactMe": {
         "1": "Name",
