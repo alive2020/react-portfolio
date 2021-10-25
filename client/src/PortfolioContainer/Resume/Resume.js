@@ -40,6 +40,9 @@ const Resume = (props) => {
         <div className='resume-heading-description'>
           <span>{props.description ? props.description : ''}</span>
         </div>
+        <div className='resume-heading-links'>
+          <span>{props.links ? props.links : ''}</span>
+        </div>
       </div>
     );
   };
@@ -68,12 +71,16 @@ const Resume = (props) => {
       title: 'UPKAIT website',
       duration: { fromDate: '2021.01', toDate: '2021.03' },
       description: t('Projects.1'),
+      linkGithub: 'github',
+      linkWebsite: 'website',
       subHeading: 'Technologies used: Next.js, Node.js, CSS, Prismic',
     },
     {
       title: 'Personal Portfolio Website',
       duration: { fromDate: '2020.12', toDate: '2021.01' },
       description: t('Projects.2'),
+      linkGithub: 'github',
+      linkWebsite: 'website',
       subHeading: 'Technologies used: Javascript, CSS, HTML.',
     },
   ];
@@ -132,10 +139,14 @@ const Resume = (props) => {
             heading={projectsDetails.title}
             subHeading={projectsDetails.subHeading}
             description={projectsDetails.description}
+            linkGithub={projectsDetails.linkGithub}
+            linkWebsite={projectsDetails.linkWebsite}
             fromDate={projectsDetails.duration.fromDate}
             toDate={projectsDetails.duration.toDate}
           />
         ))}
+        {/* <a href="#">{projectsDetails.linkGithub}</a>
+        <a href="#">{projectsDetails.linkWebsite}</a> */}
       </div>
     </div>,
 
